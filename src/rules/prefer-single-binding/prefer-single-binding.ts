@@ -352,9 +352,7 @@ export default createRule<Options, MessageIds>({
       "FunctionDeclaration, FunctionExpression, ArrowFunctionExpression": (node: Node.FunctionLike) =>
         void stack.push({ calls: [], functionEnd: node.range[1] }),
 
-      "FunctionDeclaration:exit": onFunctionExit,
-      "FunctionExpression:exit": onFunctionExit,
-      "ArrowFunctionExpression:exit": onFunctionExit,
+      "FunctionDeclaration, FunctionExpression, ArrowFunctionExpression:exit": onFunctionExit,
 
       [selectorCall](node: Node.VariableDeclarator): void {
         const init = node.init
