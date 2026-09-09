@@ -1,3 +1,7 @@
+---
+description: Combine multiple useUnit calls in a component into a single call
+---
+
 # effector/prefer-single-binding
 
 [Related documentation](https://effector.dev/en/api/effector-react/useunit/)
